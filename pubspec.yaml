@@ -1,0 +1,21 @@
+name: event_app
+description: a prototype application for an event management app for colleges called digievent,Currently in development,
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <4.0.0" # Compatible with Dart 3.4.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  provider: ^6.0.5
+  barcode_widget: ^2.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
