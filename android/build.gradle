@@ -1,0 +1,37 @@
+buildscript {
+    ext.kotlin_version = '1.9.0' // Keep this if it's compatible with your Flutter
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0' // Potentially update this
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.android" version "1.9.0" apply false // Keep this if compatible
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    afterEvaluate {
+        if (project.hasProperty("android")) {
+            android {
+                compileSdkVersion 34 // Try updating this
+                buildToolsVersion "34.0.0" // Try updating this
+            }
+        }
+    }
+}

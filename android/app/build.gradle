@@ -1,0 +1,30 @@
+android {
+    namespace "com.example.digievent"
+    compileSdkVersion flutter.compileSdkVersion // Should align with project-level
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.example.digievent"
+        minSdkVersion 33
+        targetSdkVersion flutter.targetSdkVersion // Should align with project-level
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {}
